@@ -1,192 +1,811 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+
+<html class="no-js" lang="zxx">
+
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/cdn.jsdelivr.net_npm_bootstrap@5.0.2_dist_css_bootstrap.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="https://unpkg.com/github-calendar@latest/dist/github-calendar.css" />
+    <!-- metas -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="">
     <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css" />
+    <link rel="stylesheet" href="https://unpkg.com/github-calendar@latest/dist/github-calendar.css" />
 
-    
+    <!-- title -->
+    <title>Prem Bhooma</title>
 
-    <title>Zaid</title>
+    <!-- favicon -->
+    <link href="" rel="icon" type="image/png">
+
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800" rel="stylesheet">
+
+    <!-- owl carousel CSS -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+    <!-- magnific-popup CSS -->
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <!-- animate.min CSS -->
+    <link rel="stylesheet" href="css/animate.min.css">
+
+    <!-- Font Icon Core CSS -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/et-line.css">
+
+    <!-- Core Style Css -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--[if lt IE 9]-->
+    <script src="js/html5shiv.min.js"></script>
+    <!--[endif]-->
+
+    <style>
+        .skillSet {
+            display: flex;
+            /* justify-content: center; */
+            align-items: center;
+            gap: 20px;
+            width: 50%;
+            margin: auto;
+        }
+
+        .skillSet>img {
+            width: 50px;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            width: 80%;
+            margin: auto;
+        }
+
+        .cal-card {
+            width: 80%;
+            margin: 60px auto 30px auto;
+        }
+
+        .txtbold {
+            font-weight: 600;
+        }
+
+        .cal {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        @media all and (min-width: 320px) and (max-width: 767px) {
+            .stats {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .stats img {
+                width: 100%;
+            }
+        }
+    </style>
 
 </head>
 
 <body>
-    <navbar id="nav-menu">
-        <nav class="navbar navbar-expand-lg fixed-top">
-            <div class="container">
-                <a class="navbar-brand text-white" href="#">Mohd Zaid</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active home text-white" aria-current="page" href="#home">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link about text-white" href="#about">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link skills text-white" href="#skills">Skills</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link projects text-white" href="#projects">Projects</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link contact text-white" href="#contact">Contact</a>
-                        </li>
-                    </ul>
-                    <li class="d-flex">
-                        <a class="nav-link resume text-white" target="_blank" id="resume-button-1" href="./downloads/MohdZaidResume.pdf"
-                            download>Resume</a>
-                    </li>
-                </div>
-            </div>
-        </nav>
-    </navbar>
 
-
-    <!-- Home Section -->
-
-    <section id="home">
-        <div>
-            <p>Hello!</p>
-            <p>I'm Mohd Zaid</p>
-            <p>Full Stack Web Developer</p>
+    <!-- ====== Preloader ======  -->
+    <div class="loading">
+        <div class="load-circle">
         </div>
+    </div>
+    <!-- ======End Preloader ======  -->
 
+    <!-- ====== Navgition ======  -->
+    <nav class="navbar navbar-default" id="nav-menu">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#nav-icon-collapse" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <!-- logo -->
+                <a class="logo" href="#">Mohd Zaid</a>
+
+            </div>
+
+            <!-- Collect the nav links, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="nav-icon-collapse">
+
+                <!-- links -->
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#" data-scroll-nav="0" class="nav-link home active">Home</a></li>
+                    <li><a href="#" data-scroll-nav="1" class="nav-link about">About</a></li>
+                    <li><a href="#" data-scroll-nav="2" class="nav-link skills">Skills</a></li>
+                    <li><a href="#" data-scroll-nav="3" class="nav-link projects">Projects</a></li>
+                    <li><a href="#" data-scroll-nav="4">Why Choose Me</a></li>
+                    <li><a href="#" data-scroll-nav="5" class="nav-link contact">Contact</a></li>
+                    <li><a href="./downloads/MohdZaidResume.pdf" class="nav-link resume" id="resume-button-1"
+                            target="_blank">Resume</a></li>
+
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container -->
+    </nav>
+    <!-- ====== End Navgition ======  -->
+
+    <!-- ====== Header ======  -->
+    <section id="home" class="header" data-scroll-index="0" style="background-image: url(img/bg.jpg);"
+        data-stellar-background-ratio="0.8">
+
+        <div class="v-middle">
+            <div class="container">
+                <div class="row">
+
+                    <!-- caption -->
+                    <div class="caption">
+                        <h5>Hello</h5>
+                        <h1 class="cd-headline clip">
+                            <span class="blc">I Am </span>
+                            <span class="cd-words-wrapper">
+                                <b class="is-visible">Mohd Zaid</b>
+                                <b>Web Developer</b>
+                            </span>
+                        </h1>
+
+                        <!-- social icons -->
+                        <div class="social-icon">
+                            <a href="#0" target="_blank">
+                                <span><i class="fa fa-facebook" aria-hidden="true"></i></span>
+                            </a>
+                            <a href="#0" target="_blank">
+                                <span><i class="fa fa-twitter" aria-hidden="true"></i></span>
+                            </a>
+                            <a href="www.linkedin.com/in/mohd-zaid-730a93211/" id="contact-linkedin"
+                                target="_blank">
+                                <span><i class="fa fa-linkedin" aria-hidden="true"></i></span>
+                            </a>
+                            <!-- <a href="https://www.instagram.com/v3.0__boy/" target="_blank">
+                                <span><i class="fa fa-instagram" aria-hidden="true"></i></span>
+                            </a> -->
+                            <a href="https://github.com/MohdZaid96" id="contact-github" target="_blank">
+                                <span><i class="fa fa-github" aria-hidden="true"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- end caption -->
+                </div>
+            </div><!-- /row -->
+        </div><!-- /container -->
     </section>
+    <!-- ====== End Header ======  -->
 
-
-    <!-- About Section -->
-
-    <section id="about" class="about section">
+    <!-- ====== About Hero ======  -->
+    <section class="hero section-padding pb-70 about section" data-scroll-index="1" id="about">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
-                    <img class="home-img" src="" alt="">
-                    <div>
-                        <a target="_blank" id="resume-button-2" href="./downloads/MohdZaidResume.pdf" download>Download Resume</a>
+
+                <!-- hero image -->
+                <div class="col-md-5">
+                    <div class="hero-img mb-30">
+                        <img class="home-img" src="img/my-passport-photo.jpg" alt="">
+                    </div>
+                </div>
+
+                <!-- content -->
+                <div class="col-md-7">
+                    <div class="content mb-30">
+                        <h3>About Me.</h3>
+                        <span class="sub-title">Full Stack Web Developer</span>
+                        <p class="mb-20" id="user-detail-intro">I am <b>Mohd Zaid</b> - Full Stack Web
+                            Developer. Experienced with all
+                            stages of the development cycle for dynamic web projects. Having an in-depth knowledge
+                            including advanced HTML5, CSS3, JavaScript, React, NodeJS, MangoDB. Strong background in
+                            management and leadership. I take pride in my ability to adapt quickly to new technologies
+                            and stay up-to-date with the latest trends in web development, ensuring that my work is
+                            always cutting-edge and innovative. </p>
+
+                        <p class="mb-10" id="user-detail-name"><b>Name:</b> Mohd Zaid</p>
+
+                        <p class="mb-10"><b>Nationality:</b> Citizen Of India</p>
+
+                        <p class="mb-10"><b>Phone:</b> 8882161931</p>
+
+                        <p class="mb-10"><b>E-Mail:</b> i.m.mdz.1996@gmail.com</p>
+
+                        <div class="clearfix"></div>
+
+                        <a type="button" href="./downloads/MohdZaidResume.pdf" id="resume-link-2" target="_blank">
+                            <span class="buton buton-bg">Download C.V</span>
+                        </a>
+                        <a href="#0" data-scroll-nav="6">
+                            <span class="buton">Contact Me</span>
+                        </a>
+
+                    </div>
+                </div>
+            </div><!-- /row -->
+        </div><!-- /container -->
+    </section>
+    <!-- ====== About End Hero ======  -->
+
+
+    <!-- ====== Skills ======  -->
+    <section id="skills" class="hero section-padding bg-gray pb-70" data-scroll-index="2">
+        <div class="container">
+            <div class="row">
+                <!-- content -->
+                <div class="col-md-12">
+                    <div class="content mb-30">
+                        <h3 class="mb-20 text-center">Skills</h3>
+                        <p class="mb-20 text-center">Here are a few Technologies I've been working with recently:</p>
+
+                        <div class="row text-center">
+                            <div class="col-md-4">
+
+                                <div class="skillSet skills-card">
+                                    <img class="skills-card-img" src="img/html.png" alt="html">
+                                    <p class="skills-card-name">HTML</p>
+                                </div>
+                                <div class="skillSet skills-card">
+                                    <img class="skills-card-img" src="img/react.png" alt="html">
+                                    <p class="skills-card-name">React JS</p>
+                                </div>
+                                <div class="skillSet skills-card">
+                                    <img class="skills-card-img" src="img/mongoDB.png" alt="html">
+                                    <p class="skills-card-name">MongoDB</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+
+                                <div class="skillSet skills-card">
+                                    <img class="skills-card-img" src="img/css.png" alt="CSS">
+                                    <p class="skills-card-name">CSS</p>
+                                </div>
+                                <div class="skillSet skills-card">
+                                    <img class="skills-card-img" src="img/redux.png" alt="Redux">
+                                    <p class="skills-card-name">Redux JS</p>
+                                </div>
+                                <div class="skillSet skills-card">
+                                    <img class="skills-card-img" src="img/bootstrap.png" alt="Bootstrap">
+                                    <p class="skills-card-name">Bootstrap</p>
+                                </div>
+
+
+                            </div>
+                            <div class="col-md-4">
+
+                                <div class="skillSet skills-card">
+                                    <img class="skills-card-img" src="img/js.png" alt="JavaScript">
+                                    <p class="skills-card-name">JavaScript</p>
+                                </div>
+                                <div class="skillSet" skills-card>
+                                    <img class="skills-card-img" src="img/nodejs.png" alt="Node">
+                                    <p class="skills-card-name">Node JS</p>
+                                </div>
+                                <div class="skillSet skills-card">
+                                    <img class="skills-card-img" src="img/java.png" alt="Java">
+                                    <p class="skills-card-name">Java</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="row text-center">
+                            <p class="mb-20 mt-20 text-center">Here are a few Tools I've been working with recently:</p>
+                            <div class="col-md-4">
+
+                                <div class="skillSet skills-card">
+                                    <img class="skills-card-img" src="img/git.png" alt="Git">
+                                    <p class="skills-card-name">Git</p>
+                                </div>
+                                <div class="skillSet skills-card">
+                                    <img class="skills-card-img" src="img/photoshop.png" alt="Photoshop">
+                                    <p class="skills-card-name">Photoshop</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="skillSet skills-card">
+                                    <img class="skills-card-img" src="img/vscode.png" alt="vs">
+                                    <p class="skills-card-name">VS Code</p>
+                                </div>
+
+                            </div>
+                            <div class="col-md-4">
+                                <div class="skillSet skills-card">
+                                    <img class="skills-card-img" src="img/postman.png" alt="Postman">
+                                    <p class="skills-card-name">Postman</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div><!-- /row -->
+        </div><!-- /container -->
+    </section>
+    <!-- ====== End Skills ======  -->
+
+
+
+
+    <!-- ====== Projects ======  -->
+    <section id="projects" class="hero section-padding pb-70" data-scroll-index="3">
+        <div class="container">
+
+            <!-- section heading -->
+            <div class="section-head">
+                <h3>Projects.</h3>
+            </div>
+
+
+            <div class="row project-card">
+
+                <!-- hero image -->
+                <div class="col-md-5">
+                    <div class="hero-img"
+                        style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; padding: 0px; border-radius: 20px;">
+                        <img src="img/etrade.png" alt="" style="width: 100%; border-radius: 20px;">
+                    </div>
+                </div>
+
+                <!-- content -->
+                <div class="col-md-7">
+                    <div class="content mb-30">
+                        <h3 class="project-title">Haan</h3>
+                        <span class="sub-title">E-commerce Website</span>
+                        <p class="mb-20 project-description">
+                            Welcome to the HAAN Ecommerce website! This app is dedicated to providing high-quality hand sanitizers for our users.
+                        </p>
+
+                        <p class="mb-10 project-tech-stack"><b>Tech Stack Used:</b> React JS, Node JS, Express JS,
+                            MongoDB, JavaScript,CSS and HTML</p>
+
+                        <p><a class="project-github-link" href="https://github.com/Shubham10320/HAAN/tree/main/haan"
+                                target="_blank"><b>GitHub Repository Link </b><span class="icon"><i class="fa fa-github"
+                                        aria-hidden="true"></i></span></a></p>
+
+                        <p><a class="project-deployed-link" href="https://haan-lake.vercel.app/"
+                                target="_blank"><b>Deployment Link </b><span class="icon"><i class="fa fa-laptop"
+                                        aria-hidden="true"></i></span></a></p>
+
+                    </div>
+                </div>
+            </div><!-- /row -->
+
+
+            <div class="row mt-50 project-card">
+                <!-- content -->
+                <div class="col-md-7">
+                    <div class="content mb-30">
+                        <h3 class="project-title">Green Paradise</h3>
+                        <span class="sub-title">E-commerce Website</span>
+                        <p class="mb-20 project-description">Green Paradise is an e-commerce website built using React, Redux, and Chakra UI. This app is dedicated to providing all the services related to nursery and gardening to provide ease to our end users.</p>
+
+                        <p class="mb-10 project-tech-stack"><b>Tech Stack Used:</b> React JS, Redux, JavaScript,
+                            JSON-Server, Chakra UI,CSS and HTML</p>
+
+                        <p><a class="project-github-link" href="https://github.com/NITINPANDIT1/Ecommerce-Web-App---Green-Paradise/tree/main/spiffy"
+                                target="_blank"><b>GitHub Repository Link </b><span class="icon"><i class="fa fa-github"
+                                        aria-hidden="true"></i></span></a></p>
+
+                        <p><a class="project-deployed-link" href="https://64a940ff7ed34f6e792eb18b--fluffy-cocada-764c66.netlify.app/"
+                                target="_blank"><b>Deployment Link </b><span class="icon"><i class="fa fa-laptop"
+                                        aria-hidden="true"></i></span></a></p>
+
+                    </div>
+                </div>
+
+                <!-- hero image -->
+                <div class="col-md-5">
+                    <div class="hero-img"
+                        style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; padding: 0px; border-radius: 20px;">
+                        <img src="img/oestin.png" alt="" style="width: 100%; border-radius: 20px;">
+                    </div>
+                </div>
+            </div><!-- /row -->
+
+
+            <div class="row mt-60 project-card">
+
+                <!-- hero image -->
+                <div class="col-md-5">
+                    <div class="hero-img"
+                        style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; padding: 0px; border-radius: 20px;">
+                        <img src="img/bigBasket.png" alt="" style="width: 100%; border-radius: 20px;">
+                    </div>
+                </div>
+
+                <!-- content -->
+                <div class="col-md-7">
+                    <div class="content mb-30">
+                        <h3 class="project-title">Big Basket</h3>
+                        <span class="sub-title">E-commerce Website</span>
+                        <p class="mb-20 project-description">Big Basket is a prominent and highly successful e-commerce
+                            website that has redefined the online grocery shopping experience. With its user-friendly
+                            interface and extensive product range, Big Basket has become a go-to platform for millions
+                            of customers seeking convenience and quality in grocery shopping. The website offers a
+                            seamless browsing experience, allowing users to effortlessly explore an array of fresh
+                            produce, pantry staples, household essentials, and more.</p>
+
+                        <p class="mb-10 project-tech-stack"><b>Tech Stack Used:</b> JavaScript, Bootstrap, CSS and HTML
+                        </p>
+
+                        <p><a class="project-github-link" href="https://github.com/hemobhai/bigbasketclone"
+                                target="_blank"><b>GitHub Repository Link </b><span class="icon"><i class="fa fa-github"
+                                        aria-hidden="true"></i></span></a></p>
+
+                        <p><a class="project-deployed-link" href="https://bigbasket-team2.netlify.app/"
+                                target="_blank"><b>Deployment Link </b><span class="icon"><i class="fa fa-laptop"
+                                        aria-hidden="true"></i></span></a></p>
+
+                    </div>
+                </div>
+            </div><!-- /row -->
+
+            <div class="row mt-60 project-card">
+
+                <!-- content -->
+                <div class="col-md-7">
+                    <div class="content mb-30">
+                        <h3 class="project-title">Mwendo</h3>
+                        <span class="sub-title">E-commerce Website</span>
+                        <p class="mb-20 project-description">Welcome to the Mwendo Ecommerce website! This app is dedicated to providing all the services related to tours and travel to provide ease to our adventurers. </p>
+
+                        <p class="mb-10 project-tech-stack"><b>Tech Stack Used:</b> JavaScript, Bootstrap, CSS and HTML
+                        </p>
+
+                        <p><a class="project-github-link" href="https://github.com/Htripathi07/team10_mwendoProject"
+                                target="_blank"><b>GitHub Repository Link </b><span class="icon"><i class="fa fa-github"
+                                        aria-hidden="true"></i></span></a></p>
+
+                        <p><a class="project-deployed-link"
+                                href="https://mwendu-cw2.netlify.app/"
+                                target="_blank"><b>Deployment Link </b><span class="icon"><i class="fa fa-laptop"
+                                        aria-hidden="true"></i></span></a></p>
+
+                    </div>
+                </div>
+
+
+                <!-- hero image -->
+                <div class="col-md-5">
+                    <div class="hero-img"
+                        style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; padding: 0px; border-radius: 20px;">
+                        <img src="img/autoparts.png" alt="" style="width: 100%; border-radius: 20px;">
+                    </div>
+                </div>
+            </div><!-- /row -->
+
+
+
+
+            <div class="row mt-60 project-card" style="display: none;">
+
+                <!-- content -->
+                <!-- <div class="col-md-7">
+                    <div class="content mb-30">
+                        <h3 class="project-title">Auto Parts</h3>
+                        <span class="sub-title">E-commerce Website</span>
+                        <p class="mb-20 project-description">Welcome to our premier Auto Parts E-commerce website, your
+                            ultimate destination for all types of car spare parts. Whether you're looking for specific
+                            replacement components, aiming to customize, modify, or upgrade your vehicle, or seeking
+                            parts to repair and replace worn-out elements, we've got you covered. Our vast inventory
+                            features a comprehensive selection of high-quality auto parts, catering to various makes and
+                            models. </p>
+
+                        <p class="mb-10 project-tech-stack"><b>Tech Stack Used:</b> HTML, CSS and JavaScript</p>
+
+                        <p><a class="project-github-link" href="https://github.com/dilsah786/constructweek_Project"
+                                target="_blank"><b>GitHub Repository Link </b><span class="icon"><i class="fa fa-github"
+                                        aria-hidden="true"></i></span></a></p>
+
+                        <p><a class="project-deployed-link"
+                                href="https://flourishing-cucurucho-4763d6.netlify.app/index.html"
+                                target="_blank"><b>Deployment Link </b><span class="icon"><i class="fa fa-laptop"
+                                        aria-hidden="true"></i></span></a></p>
+
+                    </div>
+                </div> -->
+
+
+                <!-- hero image -->
+                <div class="col-md-5">
+                    <div class="hero-img"
+                        style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; padding: 0px; border-radius: 20px;">
+                        <img src="img/autoparts.png" alt="" style="width: 100%; border-radius: 20px;">
+                    </div>
+                </div>
+            </div><!-- /row -->
+
+
+        </div><!-- /container -->
+    </section>
+    <!-- ====== End Projects ======  -->
+
+
+
+
+
+
+
+    <!--====== Why Choose Me ======-->
+    <section class="blog section-padding bg-gray" data-scroll-index="4">
+        <div class="container">
+            <div class="row">
+
+                <!-- section heading -->
+                <div class="section-head">
+                    <h3>Why Choose Me</h3>
+                </div>
+
+                <!-- owl carsouel -->
+                <div class="owl-carousel owl-theme">
+
+                    <!-- pitems -->
+                    <div class="pitem">
+                        <div class="post-img">
+                            <img src="img/1.png" alt="">
+                        </div>
+                        <div class="content">
+                            <h6 class="tag">
+                                <a href="#0">Expertise in Modern Web Technologies</a>
+                            </h6>
+                            <p>Stay ahead of the curve with a web developer who is proficient in the latest technologies
+                                like HTML5, CSS3, JavaScript, React, and more.</p>
+                        </div>
                     </div>
 
+                    <div class="pitem">
+                        <div class="post-img">
+                            <img src="img/2.png" alt="">
+                        </div>
+                        <div class="content">
+                            <h6 class="tag">
+                                <a href="#0">Full Stack Proficiency</a>
+                            </h6>
+                            <p>Capable of handling both front-end and back-end development, ensuring a seamless
+                                integration of all components, providing end-to-end solutions for projects.</p>
+                        </div>
+                    </div>
+
+                    <div class="pitem">
+                        <div class="post-img">
+                            <img src="img/3.png" alt="">
+                        </div>
+                        <div class="content">
+                            <h6 class="tag">
+                                <a href="#0">Responsive and Mobile-Friendly Design</a>
+                            </h6>
+                            <p>Ensure your website reaches a broader audience with a developer skilled in creating
+                                responsive designs that adapt flawlessly to all devices.</p>
+                        </div>
+                    </div>
+
+                    <div class="pitem">
+                        <div class="post-img">
+                            <img src="img/4.png" alt="">
+                        </div>
+                        <div class="content">
+                            <h6 class="tag">
+                                <a href="#0">Collaborative and Communication Skills</a>
+                            </h6>
+                            <p>Experience a smooth and transparent development process with a web developer who excels
+                                in communication and collaboration.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-6">
-                    <h2>About Me</h2>
-                    <p id="user-detail-intro">Hello! I'm Mohd Zaid. Having an in-depth knowledge including advanced HTML5, CSS3,
-                        JavaScript, React, NodeJS, MangoDB.</p>
-                    <p id="user-detail-name"><Span>Name: </Span> Mohd Zaid</p>
+
+            </div><!-- /row -->
+        </div><!-- /container -->
+    </section>
+    <!--====== End Why Choose Me ======-->
+
+
+    <!-- Calender Shows Here -->
+
+    <section>
+
+
+        <div class="cal-card">
+            <h4 class="mb-20 text-center txtbold">GitHub Calender</h2>
+                <div class="cal">
+                    <div class="calendar react-activity-calendar">
+                        <!-- Loading stuff -->
+                        Loading the data just for you.
+
+                    </div>
                 </div>
-            </div>
         </div>
+
+
+
+        <div class="stats">
+            <!-- GitHub streak stats -->
+            <div>
+                <h4 class="mb-20 txtbold text-center">GitHub streak</h2>
+                    <a href="https://github.com/MohdZaid96" target="_blank">
+                        <img src="https://github-readme-streak-stats.herokuapp.com?user=MohdZaid96" alt="GitHub Streak"
+                            id="github-streak-stats">
+                    </a>
+            </div>
+
+
+            <!-- GitHub top languages -->
+            <div>
+                <h4 class="mb-20 txtbold text-center">GitHub top languages </h2>
+                    <a href="https://github.com/MohdZaid96" target="_blank">
+                        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MohdZaid96&layout=compact"
+                            alt="GitHub Top Languages" id="github-top-langs">
+                    </a>
+            </div>
+
+            <!-- GitHub stats card -->
+            <div>
+                <h4 class="mb-20 txtbold text-center">GitHub stats </h2>
+                    <a href="https://github.com/MohdZaid96" target="_blank">
+                        <img src="https://github-readme-stats.vercel.app/api?username=MohdZaid96&show_icons=true"
+                            alt="GitHub Stats" id="github-stats-card">
+                    </a>
+            </div>
+
+        </div>
+
 
     </section>
 
 
-    <!-- Skills Section -->
-    <section id="skills">
+
+    <!-- Calender Shows Here End-->
+
+
+    <!--====== Contact ======-->
+    <section id="contact" class="contact section-padding" data-scroll-index="5">
         <div class="container">
-            <h2>Skills</h2>
             <div class="row">
-                <div class="col-md-2 skills-card">
-                    <img class="skills-card-img" src="" alt="">
-                    <p class="skills-card-name">HTML</p>
+
+                <!-- section heading -->
+                <div class="section-head">
+                    <h3>Contact Me.</h3>
                 </div>
-                <div class="col-md-2 skills-card">
-                    <img class="skills-card-img" src="" alt="">
-                    <p class="skills-card-name">CSS</p>
+
+                <div class="col-md-offset-1 col-md-10">
+
+                    <!-- contact info -->
+                    <div class="info text-center mb-50">
+
+                        <div class="col-md-4">
+                            <div class="item">
+                                <span class="icon"><i class="fa fa-location-arrow" aria-hidden="true"></i></span>
+                                <h6>Address</h6>
+                                <p>Delhi, India</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="item">
+                                <span class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                                <h6>Email</h6>
+                                <p id="contact-email">i.m.mdz.1996@gmail.com</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="item">
+                                <span class="icon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                                <h6>Phone</h6>
+                                <p id="contact-phone">8882161931</p>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+
+                    <!-- contact form -->
+                    <form class="form" id="contact-form">
+                        <div class="messages"></div>
+
+                        <div class="controls">
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input id="form_name" type="text" name="name" placeholder="Name"
+                                            required="required">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input id="form_email" type="email" name="email" placeholder="Email"
+                                            required="required">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <textarea id="form_message" name="message" placeholder="Message" rows="4"
+                                            required="required"></textarea>
+                                    </div>
+
+                                    <input type="submit" value="Submit" class="buton buton-bg">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
                 </div>
+            </div><!-- /row -->
+        </div><!-- /container -->
+    </section>
+    <!--====== End Contact ======-->
+
+    <!--====== Footer ======-->
+    <footer>
+        <div class="container text-center">
+            <div class="row">
+                <p>Designed and Build &copy; By Mohd Zaid</p>
             </div>
         </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project-card">
-            <img src="path/to/project1.png" alt="Project 1">
-            <h3 class="project-title">Project 1</h3>
-            <p class="project-description">description goes here...</p>
-            <p class="project-tech-stack">HTML5, CSS3, JavaScript, React, NodeJS, MangoDB.</p>
-            <a class="project-github-link" href="https://github.com/pro" target="_blank">GitHub </a>
-            <a class="project-deployed-link" href="https://mwendu-project.netlify.app/" target="_blank">Link</a>
-        </div>
-        <div class="project-card">
-            <img src="path/to/project2.png" alt="Project 2">
-            <h3 class="project-title">Project 2</h3>
-            <p class="project-description">description goes here...</p>
-            <p class="project-tech-stack">HTML5, CSS3, JavaScript, React, NodeJS, MangoDB.</p>
-            <a class="project-github-link" href="https://github.com/prot" target="_blank">GitHub </a>
-            <a class="project-deployed-link" href="https://mwendu-project.netlify.app/" target="_blank">Link</a>
-        </div>
-        <div class="project-card">
-            <img src="path/to/project2.png" alt="Project 3">
-            <h3 class="project-title">Project 3</h3>
-            <p class="project-description">description goes here...</p>
-            <p class="project-tech-stack">HTML5, CSS3, JavaScript, React, NodeJS, MangoDB.</p>
-            <a class="project-github-link" href="https://github.com/prot" target="_blank">GitHub </a>
-            <a class="project-deployed-link" href="https://mwendu-project.netlify.app/" target="_blank">Link</a>
-        </div>
-        <div class="project-card">
-            <img src="path/to/project2.png" alt="Project 4">
-            <h3 class="project-title">Project 4</h3>
-            <p class="project-description">description goes here...</p>
-            <p class="project-tech-stack">HTML5, CSS3, JavaScript, React, NodeJS, MangoDB.</p>
-            <a class="project-github-link" href="https://github.com/prot" target="_blank">GitHub </a>
-            <a class="project-deployed-link" href="https://mwendu-project.netlify.app/" target="_blank">Link</a>
-        </div>
-    </section>
-
-    <div class="calendar react-activity-calendar">
-        Loading the data just for you.
-    </div>
-
-    <div>
-        <!-- GitHub streak stats -->
-        <a href="https://github.com/MohdZaid96" target="_blank">
-            <img src="https://github-readme-streak-stats.herokuapp.com?user=MohdZaid96" alt="GitHub Streak"
-                id="github-streak-stats">
-        </a>
-
-        <!-- GitHub top languages -->
-        <a href="https://github.com/MohdZaid96" target="_blank">
-            <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MohdZaid96&layout=compact"
-                alt="GitHub Top Languages" id="github-top-langs">
-        </a>
-
-        <!-- GitHub stats card -->
-        <a href="https://github.com/MohdZaid96" target="_blank">
-            <img src="https://github-readme-stats.vercel.app/api?username=MohdZaid96&show_icons=true" alt="GitHub Stats"
-                id="github-stats-card">
-        </a>
-
-    </div>
+    </footer>
+    <!--====== End Footer ======-->
 
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p id="contact-github">GitHub: <a href="https://github.com/yourusername" target="_blank">Mohd Zaid</a></p>
-        <p id="contact-linkedin">LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">Mohd Zaid</a>
-        </p>
-        <p id="contact-phone">Phone: 0000000000</p>
-        <p id="contact-email">Email: mohdzaid@example.com</p>
-    </section>
 
     <!-- JavaScript -->
     <script>
         GitHubCalendar(".calendar", "MohdZaid96");
-        GitHubCalendar(".calendar", "MohdZaid96", { responsive: true });
+
+        // or enable responsive functionality:
+        GitHubCalendar(".calendar", "MohdZaid96 ", { responsive: true });
     </script>
 
+
+    <!-- jQuery -->
+    <script src="code.jquery.com/jquery-3.0.0.min.js"></script>
+    <script src="code.jquery.com/jquery-migrate-3.0.0.min.js"></script>
+
+    <!-- bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- scrollIt -->
+    <script src="js/scrollIt.min.js"></script>
+
+    <!-- magnific-popup -->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+
+    <!-- owl carousel -->
+    <script src="js/owl.carousel.min.js"></script>
+
+    <!-- stellar js -->
+    <script src="js/jquery.stellar.min.js"></script>
+
+    <!-- animated.headline -->
+    <script src="js/animated.headline.js"></script>
+
+    <!-- jquery.waypoints.min js -->
+    <script src="js/jquery.waypoints.min.js"></script>
+
+    <!-- jquery.counterup.min js -->
+    <script src="js/jquery.counterup.min.js"></script>
+
+    <!-- isotope.pkgd.min js -->
+    <script src="js/isotope.pkgd.min.js"></script>
+
+    <!-- validator js -->
+    <script src="js/validator.js"></script>
+
+    <!-- custom script -->
+    <script src="js/custom.js"></script>
 
 </body>
 
